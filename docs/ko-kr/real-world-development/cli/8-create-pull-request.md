@@ -26,19 +26,19 @@ lastUpdated: 2026-09-18
 
 **Agent Merge**는 풀 리퀘스트 병합에 필요한 나머지 작업을 자동화합니다. 활성화하면 Copilot이 PR을 막고 있는 작업을 처리합니다. 실패한 지속적 통합(CI) 검사를 수정하고 검토 댓글에 응답하고 필요한 경우 리베이스한 뒤 리포지토리에서 허용하면 GitHub 자동 병합을 활성화합니다.
 
-지금까지는 사용자가 직접 **Merge pull request**를 선택했습니다. Agent Merge에 이 책임을 맡길 수 있습니다. 활성화하기 전에 변경 사항을 검토하고 병합할 준비가 되었는지 판단합니다.
+지금까지는 직접 **Merge pull request**를 선택했습니다. Agent Merge가 이 책임을 맡을 수 있지만, 활성화하기 전에 작업 내용을 검토하고 병합할 준비가 되었는지 확인해야 합니다.
 
 ## Agent Merge로 PR 관리하기
 
-코드를 모두 작성했으니 함께 검토하고 PR을 만든 뒤 Agent Merge가 나머지 절차를 관리하도록 합니다.
+코드 작성을 모두 마쳤습니다. 이제 함께 검토하고 PR을 만든 다음 Agent Merge가 나머지 절차를 관리하도록 합니다.
 
 1. Codespace로 돌아갑니다.
 2. `/agent`를 입력해 에이전트 대화 상자를 엽니다.
-3. 목록에서 **Default**를 선택하고 <kbd>Enter</kbd>를 누릅니다.
-4. `/pr create` 명령으로 새 PR을 만듭니다.
-5. `/pr agentmerge`를 입력해 Agent Merge를 활성화합니다.
-6. Copilot이 PR에서 지속적 통합을 모니터링합니다. 모든 검사가 성공하면 병합을 수행합니다.
-7. Copilot이 `"PR #14 was squash-merged successfully."`와 비슷한 메시지를 표시하는지 확인합니다.
+3. 옵션 목록에서 **Default**를 선택하고 <kbd>Enter</kbd>를 누릅니다.
+4. `/pr create` 명령을 사용해 새 PR을 만듭니다.
+5. `/pr agentmerge` 명령을 사용해 Agent Merge를 활성화합니다.
+6. Copilot은 PR의 CI(지속적 통합) 진행 상황을 모니터링합니다. 모든 검사가 통과하면 병합을 수행합니다.
+7. Copilot이 “PR #14 was squash-merged successfully.”와 비슷한 메시지를 표시하는지 확인합니다.
 
 > [!IMPORTANT]
 > Agent Merge는 필수 승인, 브랜치 보호, 병합 대기열, 리포지토리 설정, 권한 부족을 우회하지 않습니다. 차단되면 보고된 이유를 읽고 리포지토리에서 허용하는 경우 검토한 뒤 직접 병합합니다.
